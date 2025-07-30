@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Proyecto</title>
+</head>
+<body>
+  <header class="header"></header>
+
+  <nav class="menu">
+    <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#statics">Estadisticas</a></li>
+        <li><a href="#form">Consulta aqui</a></li>
+        <li><a href="#info">Contactenos</a></li>
+    </ul>
+  </nav>
+  <div class="main-content">
+    <!-- video inicial paneles -->
+    <section class="inicio">
+        <video src="media/panel.mp4" poster="" loop="" muted="" playsinline="" autoplay=""></video>
+    </section>
+
+
+    <!-- graficas -->
+    <section class="statics">
+        <h2>titulo</h2>
+            <!-- USAR RETO 9!!! -->
+    </section>
+
+
+    <!-- form y link ia(?) -->
+    <section class="form">
+        <h2>titulo</h2>
+            
+        <FIeldset>
+                <legend>Información Personal</legend>
+
+                <label for="name">Nombre Completo:</label>
+                <input type="text" id="name" required placeholder="Ingrese su nombre completo">
+
+                <label for="company">Entidad/Organización:</label>
+                <input type="text" id="company" required placeholder="Ingrese nombre de su Entidad/Organización">
+
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" required placeholder="Ingrese su Correo Electrónico">
+
+                <label for="location">Dirección</label>
+                <input type="text" id="location" required placeholder="Ingrese su Dirección">
+
+        </FIeldset>
+        
+        <fieldset>
+            <legend>Información del Proyecto</legend>
+            <label for="namep">Nombre del Proyecto:</label>
+            <input type="text" id="namep" required placeholder="Ingrese el nombre del Proyecto">
+
+            <label for="ubication">Ubicación del Proyecto:</label>
+            <input type="text" id="ubication" required placeholder="Ingrese la ubicación del Proyecto">
+
+           <label for="land">Tipo de suelo</label>
+            <select name="land" id="land" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="arenoso">Arenoso</option>
+                        <option value="arcilloso">Arcilloso</option>
+                        <option value="organico">Organico</option>
+                    </select>
+                        
+
+
+        </fieldset>
+    </section>
+
+
+    <!-- contacto -->
+    <section class="info">
+        <h2>titulo</h2>
+            <!-- TIRAR CSS Y HATML BIEN CUTIE!!! -->
+    </section>
+
+
+  </div>
+
+  <footer class="footer"> hecho por </footer>
+
+    
+    <script src="js/scripts.js"></script>
+</body>
+</html>
