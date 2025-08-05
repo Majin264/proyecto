@@ -36,6 +36,31 @@
             <!-- USAR RETO 9!!! -->
     </section>
 
+    <!-- Calculadora -->
+     
+    <div class="calculator-container">
+        <h1>Calculadora de Paneles Solares  paneles</h1>
+        <div class="input-group">
+            <label for="megawatts">Potencia a Generar (MW):</label>
+            <input type="number" id="megawatts" value="1" min="0.1" step="0.1">
+        </div>
+        <div class="input-group">
+            <label for="panel-wattage">Potencia por Panel (Watts):</label>
+            <input type="number" id="panel-wattage" value="400" min="250" step="10">
+        </div>
+        <button id="calculate-btn">Calcular</button>
+        <div id="results" class="results-container">
+            <h2>Resultados Estimados</h2>
+            <p><strong>Número de Paneles Necesarios:</strong> <span id="panel-count">0</span></p>
+            <p><strong>Área de Instalación Requerida:</strong> <span id="area-required">0</span> hectáreas</p>
+        </div>
+    </div>
+
+
+
+
+
+
 
     <!-- form y link ia(?) -->
     <section class="form">
