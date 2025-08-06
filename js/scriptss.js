@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("📤 Datos enviados a GPT:", formData);
 
         try {
-            const res = await fetch("https://40e8057b6360.ngrok-free.app/api/consulta", {
+            const res = await fetch("https://288a1152bde1.ngrok-free.app/api/consulta", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData)
