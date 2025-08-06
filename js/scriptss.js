@@ -1,13 +1,13 @@
-<script>
+
 document.addEventListener("DOMContentLoaded", function () {
     // Obtener referencias a los elementos
     const form = document.getElementById("form"); // Asegúrate de que tu formulario tenga id="form"
     const respuestaDiv = document.getElementById("respuesta"); // Asegúrate de tener un div con id="respuesta"
 
     if (!form || !respuestaDiv) {
-        console.error("❌ No se encontró el formulario o el div de respuesta en el DOM.")
+        console.error("❌ No se encontró el formulario o el div de respuesta en el DOM.");
         return;
-    };
+    }
 
     form.addEventListener("submit", async function (e) {
         e.preventDefault();
@@ -46,15 +46,15 @@ document.addEventListener("DOMContentLoaded", function () {
             const data = await res.json();
             console.log("📥 Respuesta GPT:", data);
 
+            // ✅ Estructura if/else corregida
             if (data.message) {
                 respuestaDiv.innerText = data.message;
-            else {
+            } else {
                 respuestaDiv.innerText = "❌ Error: " + (data.error || "Respuesta desconocida");
             }
         } catch (err) {
             console.error("❌ Error fetch:", err);
             respuestaDiv.innerText = "❌ Error de red o del servidor";
         }
-    )};
+    }); // ✅ Cierre corregido
 });
-</script>
