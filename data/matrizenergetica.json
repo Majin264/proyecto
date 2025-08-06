@@ -1,0 +1,39 @@
+{
+  "matriz_energetica_desglosada": [
+    {
+      "fuente": "Hidráulica",
+      "capacidad_instalada_mw": 13968.2,
+      "porcentaje_total": 68.3
+    },
+    {
+      "fuente": "Gas Natural",
+      "capacidad_instalada_mw": 2932.0,
+      "porcentaje_total": 14.34
+    },
+    {
+      "fuente": "Líquidos (ACPM/Diésel)",
+      "capacidad_instalada_mw": 1698.0,
+      "porcentaje_total": 8.3
+    },
+    {
+      "fuente": "Carbón",
+      "capacidad_instalada_mw": 1570.0,
+      "porcentaje_total": 7.68
+    },
+    {
+      "fuente": "Solar",
+      "capacidad_instalada_mw": 194.0,
+      "porcentaje_total": 0.95
+    },
+    {
+      "fuente": "Eólica",
+      "capacidad_instalada_mw": 86.0,
+      "porcentaje_total": 0.42
+    },
+    {
+      "fuente": "Biomasa",
+      "capacidad_instalada_mw": 3.0,
+      "porcentaje_total": 0.01
+    }
+  ]
+}

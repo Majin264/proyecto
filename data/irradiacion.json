@@ -1,0 +1,132 @@
+{
+  "irradiancia_por_departamento": [
+    {
+      "departamento": "La Guajira",
+      "irradiancia_kwh_m2_ano": 2190
+    },
+    {
+      "departamento": "San Andrés y Providencia",
+      "irradiancia_kwh_m2_ano": 2008
+    },
+    {
+      "departamento": "Atlántico",
+      "irradiancia_kwh_m2_ano": 1825
+    },
+    {
+      "departamento": "Bolívar",
+      "irradiancia_kwh_m2_ano": 1825
+    },
+    {
+      "departamento": "Cesar",
+      "irradiancia_kwh_m2_ano": 1825
+    },
+    {
+      "departamento": "Córdoba",
+      "irradiancia_kwh_m2_ano": 1825
+    },
+    {
+      "departamento": "Magdalena",
+      "irradiancia_kwh_m2_ano": 1825
+    },
+    {
+      "departamento": "Sucre",
+      "irradiancia_kwh_m2_ano": 1825
+    },
+    {
+      "departamento": "Antioquia",
+      "irradiancia_kwh_m2_ano": 1643
+    },
+    {
+      "departamento": "Arauca",
+      "irradiancia_kwh_m2_ano": 1643
+    },
+    {
+      "departamento": "Boyacá",
+      "irradiancia_kwh_m2_ano": 1643
+    },
+    {
+      "departamento": "Caldas",
+      "irradiancia_kwh_m2_ano": 1643
+    },
+    {
+      "departamento": "Casanare",
+      "irradiancia_kwh_m2_ano": 1643
+    },
+    {
+      "departamento": "Cundinamarca",
+      "irradiancia_kwh_m2_ano": 1643
+    },
+    {
+      "departamento": "Huila",
+      "irradiancia_kwh_m2_ano": 1643
+    },
+    {
+      "departamento": "Meta",
+      "irradiancia_kwh_m2_ano": 1643
+    },
+    {
+      "departamento": "Norte de Santander",
+      "irradiancia_kwh_m2_ano": 1643
+    },
+    {
+      "departamento": "Risaralda",
+      "irradiancia_kwh_m2_ano": 1643
+    },
+    {
+      "departamento": "Santander",
+      "irradiancia_kwh_m2_ano": 1643
+    },
+    {
+      "departamento": "Tolima",
+      "irradiancia_kwh_m2_ano": 1643
+    },
+    {
+      "departamento": "Vichada",
+      "irradiancia_kwh_m2_ano": 1643
+    },
+    {
+      "departamento": "Quindío",
+      "irradiancia_kwh_m2_ano": 1570
+    },
+    {
+      "departamento": "Caquetá",
+      "irradiancia_kwh_m2_ano": 1551
+    },
+    {
+      "departamento": "Guainía",
+      "irradiancia_kwh_m2_ano": 1551
+    },
+    {
+      "departamento": "Putumayo",
+      "irradiancia_kwh_m2_ano": 1551
+    },
+    {
+      "departamento": "Guaviare",
+      "irradiancia_kwh_m2_ano": 1533
+    },
+    {
+      "departamento": "Amazonas",
+      "irradiancia_kwh_m2_ano": 1460
+    },
+    {
+      "departamento": "Nariño",
+      "irradiancia_kwh_m2_ano": 1460
+    },
+    {
+      "departamento": "Vaupés",
+      "irradiancia_kwh_m2_ano": 1460
+    },
+    {
+      "departamento": "Cauca",
+      "irradiancia_kwh_m2_ano": 1278
+    },
+    {
+      "departamento": "Chocó",
+      "irradiancia_kwh_m2_ano": 1278
+    },
+    {
+      "departamento": "Valle del Cauca",
+      "irradiancia_kwh_m2_ano": 1278
+    }
+  ]
+}

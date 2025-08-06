@@ -1,0 +1,108 @@
+{
+  "eficiencia_energetica_panel": [
+    {
+      "ano": 0,
+      "eficiencia_estimada": 22.50
+    },
+    {
+      "ano": 1,
+      "eficiencia_estimada": 22.28
+    },
+    {
+      "ano": 2,
+      "eficiencia_estimada": 22.19
+    },
+    {
+      "ano": 3,
+      "eficiencia_estimada": 22.10
+    },
+    {
+      "ano": 4,
+      "eficiencia_estimada": 22.01
+    },
+    {
+      "ano": 5,
+      "eficiencia_estimada": 21.92
+    },
+    {
+      "ano": 6,
+      "eficiencia_estimada": 21.83
+    },
+    {
+      "ano": 7,
+      "eficiencia_estimada": 21.75
+    },
+    {
+      "ano": 8,
+      "eficiencia_estimada": 21.66
+    },
+    {
+      "ano": 9,
+      "eficiencia_estimada": 21.57
+    },
+    {
+      "ano": 10,
+      "eficiencia_estimada": 21.49
+    },
+    {
+      "ano": 11,
+      "eficiencia_estimada": 21.40
+    },
+    {
+      "ano": 12,
+      "eficiencia_estimada": 21.32
+    },
+    {
+      "ano": 13,
+      "eficiencia_estimada": 21.23
+    },
+    {
+      "ano": 14,
+      "eficiencia_estimada": 21.15
+    },
+    {
+      "ano": 15,
+      "eficiencia_estimada": 21.06
+    },
+    {
+      "ano": 16,
+      "eficiencia_estimada": 20.98
+    },
+    {
+      "ano": 17,
+      "eficiencia_estimada": 20.90
+    },
+    {
+      "ano": 18,
+      "eficiencia_estimada": 20.81
+    },
+    {
+      "ano": 19,
+      "eficiencia_estimada": 20.73
+    },
+    {
+      "ano": 20,
+      "eficiencia_estimada": 20.65
+    },
+    {
+      "ano": 21,
+      "eficiencia_estimada": 20.57
+    },
+    {
+      "ano": 22,
+      "eficiencia_estimada": 20.48
+    },
+    {
+      "ano": 23,
+      "eficiencia_estimada": 20.40
+    },
+    {
+      "ano": 24,
+      "eficiencia_estimada": 20.32
+    },
+    {
+      "ano": 25,
+      "eficiencia_estimada": 20.24
+    }
+  ]
+}

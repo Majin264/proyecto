@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <title>Proyecto</title>
 </head>
@@ -12,15 +13,13 @@
     <header class="header">
         <img src="media/project__1_-removebg-preview.png" alt="logo" class="header-overlay">
         <h3 class="ttl"> Rayo project </h3>
-        <button class="contact">
-            <a href="#info">sobre nosotros></a>
-        </button>
     </header>
 
     <nav class="navbar">
         <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#statics">Estadisticas</a></li>
+            <li><a href="#calculator">Calculadora MW/Paneles</a></li>
             <li><a href="#form">Consulta aqui</a></li>
         </ul>
     </nav>
@@ -30,8 +29,23 @@
             <video src="media/panel.mp4" loop muted playsinline autoplay></video>
         </section>
 
+        <!-- Main content statics  -->
         <section class="statics">
-            <h2>titulo</h2>
+            <h1>Datos a tener en cuenta</h1>
+                <section>
+                    <h2>Irradiancia por Departamento</h2>
+                    <canvas id="graficoIrradiancia"></canvas>
+                </section>
+
+                <section>
+                    <h2>Producción Acumulada considerando pérdida de eficiencia</h2>
+                    <canvas id="graficoProduccion"></canvas>
+                </section>
+
+                <section>
+                    <h2>Matriz Energética de Colombia</h2>
+                    <canvas id="graficoMatriz"></canvas>
+                </section>
         </section>
 
         <div class="calculator-container">
@@ -215,6 +229,11 @@
             });
         });
     </script>
+    <script src="js/scripts.js"></script>
+
+    <footer>
+        <p>2025 Rayo Project. Todos los derechos reservados ®️. Desarrollado por Maria Jose Escobar y Juan Sebastian Miranda</p>
+    </footer>
 </body>
 
 </html>
