@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,115 +9,268 @@
 </head>
 
 <body>
-  <header class="header">
-    <img src="media/project__1_-removebg-preview.png" alt="logo" class="header-overlay">
-    <h3 class="ttl"> Rayo project </h3>
-    <button class="contact"> 
-        <a href="#info">sobre nosotros></a></button>
-  </header>
+    <header class="header">
+        <img src="media/project__1_-removebg-preview.png" alt="logo" class="header-overlay">
+        <h3 class="ttl"> Rayo project </h3>
+        <button class="contact">
+            <a href="#info">sobre nosotros></a></button>
+    </header>
 
-  <nav class="navbar">
-    <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#statics">Estadisticas</a></li>
-        <li><a href="#form">Consulta aqui</a></li>
-    </ul>
-  </nav>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#statics">Estadisticas</a></li>
+            <li><a href="#form">Consulta aqui</a></li>
+        </ul>
+    </nav>
 
-  <div class="main-content">
-    <!-- video inicial paneles -->
-    <section class="inicio">
-        <video src="media/panel.mp4" poster="" loop="" muted="" playsinline="" autoplay=""></video>
-    </section>
+    <div class="main-content">
+        <!-- video inicial paneles -->
+        <section class="inicio">
+            <video src="media/panel.mp4" poster="" loop="" muted="" playsinline="" autoplay=""></video>
+        </section>
 
 
-    <!-- graficas -->
-    <section class="statics">
-        <h2>titulo</h2>
+        <!-- graficas -->
+        <section class="statics">
+            <h2>titulo</h2>
             <!-- USAR RETO 9!!! -->
-    </section>
+        </section>
 
-    <!-- Calculadora -->
-     
-    <div class="calculator-container">
-        <h1>Calculadora de Paneles Solares  paneles</h1>
-        <div class="input-group">
-            <label for="megawatts">Potencia a Generar (MW):</label>
-            <input type="number" id="megawatts" value="1" min="0.1" step="0.1">
+        <!-- Calculadora -->
+
+        <div class="calculator-container">
+            <h1>Calculadora de Paneles Solares paneles</h1>
+            <div class="input-group">
+                <label for="megawatts">Potencia a Generar (MW):</label>
+                <input type="number" id="megawatts" value="1" min="0.1" step="0.1">
+            </div>
+            <div class="input-group">
+                <label for="panel-wattage">Potencia por Panel (Watts):</label>
+                <input type="number" id="panel-wattage" value="400" min="250" step="10">
+            </div>
+            <button id="calculate-btn">Calcular</button>
+            <div id="results" class="results-container">
+                <h2>Resultados Estimados</h2>
+                <p><strong>Número de Paneles Necesarios:</strong> <span id="panel-count">0</span></p>
+                <p><strong>Área de Instalación Requerida:</strong> <span id="area-required">0</span> hectáreas</p>
+            </div>
         </div>
-        <div class="input-group">
-            <label for="panel-wattage">Potencia por Panel (Watts):</label>
-            <input type="number" id="panel-wattage" value="400" min="250" step="10">
-        </div>
-        <button id="calculate-btn">Calcular</button>
-        <div id="results" class="results-container">
-            <h2>Resultados Estimados</h2>
-            <p><strong>Número de Paneles Necesarios:</strong> <span id="panel-count">0</span></p>
-            <p><strong>Área de Instalación Requerida:</strong> <span id="area-required">0</span> hectáreas</p>
-        </div>
+
+
+        <!-- Form section with retro fieldsets -->
+        <section id="form" class="form mb-8 bg-white p-4 retro-border">
+            <h2 class="text-2xl font-bold mb-4 text-retroBlue border-b-2 border-retroBlue pb-2">FORMULARIO DE CONSULTA
+            </h2>
+            <form class="space-y-6">
+                <!-- Información Personal (inchangée) -->
+                <fieldset class="retro-fieldset">
+                    <legend class="retro-legend">Información Personal</legend>
+
+                    <div class="mb-4">
+                        <label for="name" class="block mb-1 font-bold">Nombre Completo:</label>
+                        <input type="text" id="name" required placeholder="Ingrese su nombre completo"
+                            class="w-full retro-input p-2">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="company" class="block mb-1 font-bold">Entidad/Organización:</label>
+                        <input type="text" id="company" required placeholder="Ingrese nombre de su Entidad/Organización"
+                            class="w-full retro-input p-2">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="email" class="block mb-1 font-bold">Correo Electrónico</label>
+                        <input type="email" id="email" required placeholder="Ingrese su Correo Electrónico"
+                            class="w-full retro-input p-2">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="location" class="block mb-1 font-bold">Dirección</label>
+                        <input type="text" id="location" required placeholder="Ingrese su Dirección"
+                            class="w-full retro-input p-2">
+                    </div>
+                </fieldset>
+
+                <!-- Información del Proyecto (actualisée -->
+                <fieldset class="retro-fieldset">
+                    <legend class="retro-legend">Información del Proyecto</legend>
+
+                    <div class="mb-4">
+                        <label for="namep" class="block mb-1 font-bold">¿Cuál es el nombre del proyecto?</label>
+                        <input type="text" id="namep" required placeholder="Ingrese el nombre del Proyecto"
+                            class="w-full retro-input p-2">
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block mb-1 font-bold">¿Dónde está ubicado el proyecto?</label>
+                        <div id="map" style="height: 300px;" class="w-full retro-border mb-2"></div>
+                        <input type="text" id="ubication" name="ubication"
+                            readonlyclass="w-full retro-input p-2 text-sm text-gray-600 bg-gray-100"
+                            placeholder="Latitud, Longitud seleccionadas automáticamente">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="land" class="block mb-1 font-bold">¿Qué tipo de suelo hay en el terreno del proyecto
+                            y cuál es su área?</label>
+                        <input type="text" id="land" required placeholder="Ej: Arcilloso, 1500 m²"
+                            class="w-full retro-input p-2">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="ambiente" class="block mb-1 font-bold">¿Qué tipo de ambiente hay en el área de su
+                            proyecto?</label>
+                        <input type="text" id="ambiente" required placeholder="Ej: Rural, urbano, semiboscoso..."
+                            class="w-full retro-input p-2">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="irradiancia" class="block mb-1 font-bold">¿Cuánta es la irradiancia en la zona del
+                            proyecto?</label>
+                        <input type="text" id="irradiancia" required placeholder="Ej: 5.5 kWh/m²/día"
+                            class="w-full retro-input p-2">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="mw" class="block mb-1 font-bold">¿Cuántas MW espera producir?</label>
+                        <input type="text" id="mw" required placeholder="Ej: 3 MW" class="w-full retro-input p-2">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="presupuesto" class="block mb-1 font-bold">¿Qué presupuesto tiene para el
+                            proyecto?</label>
+                        <input type="text" id="presupuesto" required placeholder="Ej: 250,000 USD"
+                            class="w-full retro-input p-2">
+                    </div>
+                </fieldset>
+
+                <div class="text-center">
+                    <button type="submit" class="retro-button px-6 py-2 font-bold">
+                        ENVIAR CONSULTA
+                    </button>
+                </div>
+            </form>
+
+            <script>
+                function initMap() {
+                    const defaultPosition = { lat: 4.711, lng: -74.072 }; // Bogotá
+
+                    const map = new google.maps.Map(document.getElementById("map"), {
+                        center: defaultPosition,
+                        zoom: 6
+                    });
+
+                    const marker = new google.maps.Marker({
+                        position: defaultPosition,
+                        map: map,
+                        draggable: true
+                    });
+
+                    function updateInput(latLng) {
+                        document.getElementById("ubication").value = latLng.lat().toFixed(6) + ", " + latLng.lng().toFixed(6);
+                    }
+
+                    google.maps.event.addListener(map, "click", function (event) {
+                        marker.setPosition(event.latLng);
+                        updateInput(event.latLng);
+                    });
+
+                    google.maps.event.addListener(marker, "dragend", function (event) {
+                        updateInput(event.latLng);
+                    });
+
+                    updateInput(defaultPosition);
+                }
+
+                const mapsScript = document.createElement("script");
+                mapsScript.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBX1RYIsbizJZjxwUQAoPnHEXlCtdFePt4&callback=initMap";
+                mapsScript.async = true;
+                mapsScript.defer = true;
+                document.head.appendChild(mapsScript);
+            </script>
+
+            <div id="respuestaGPT"
+                style="white-space: pre-wrap; background: #f4f4f4; padding: 1rem; margin-top: 20px; border-radius: 8px; display: none;">
+            </div>
+
+        </section>
+
+        <!-- Contact information with retro look -->
+        <section id="info" class="info mb-8 bg-white p-4 retro-border">
+            <h2 class="text-2xl font-bold mb-4 text-retroBlue border-b-2 border-retroBlue pb-2">INFORMACIÓN DE CONTACTO
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-retroLight p-4 retro-border">
+                    <h3 class="font-bold text-retroOrange mb-3">DATOS DE CONTACTO</h3>
+                    <ul class="space-y-2">
+                        <li><strong>Dirección:</strong> Calle Científica 123, Laboratorio 4B</li>
+                        <li><strong>Teléfono:</strong> +34 123 456 789</li>
+                        <li><strong>Fax:</strong> +34 987 654 321</li>
+                        <li><strong>Email:</strong> info@proyectocientifico.org</li>
+                    </ul>
+                </div>
+                <div class="bg-retroLight p-4 retro-border">
+                    <h3 class="font-bold text-retroOrange mb-3">HORARIO DE ATENCIÓN</h3>
+                    <ul class="space-y-2">
+                        <li><strong>Lunes a Viernes:</strong> 9:00 - 14:00 / 16:00 - 19:00</li>
+                        <li><strong>Sábados:</strong> 10:00 - 14:00</li>
+                        <li><strong>Domingos:</strong> Cerrado</li>
+                    </ul>
+                    <div class="mt-4 p-2 bg-black text-green-400 text-sm">
+                        <p>CONECTADO AL SERVIDOR: OK</p>
+                        <p>ÚLTIMO BACKUP: 14/05/2003 23:59</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
+    <!-- Retro footer -->
+    <footer class="footer bg-retroDark text-white p-4 text-center text-sm">
+        <div class="container mx-auto">
+            <p class="mb-2">© 2003 PROYECTO CIENTÍFICO - TODOS LOS DERECHOS RESERVADOS</p>
+            <p class="text-retroGray">Optimizado para Internet Explorer 5.5 - Resolución recomendada 800x600</p>
+            <div class="mt-2 flex justify-center space-x-4">
+                <a href="#" class="text-retroOrange hover:underline">Política de Privacidad</a>
+                <a href="#" class="text-retroOrange hover:underline">Términos de Uso</a>
+                <a href="#" class="text-retroOrange hover:underline">Mapa del Sitio</a>
+            </div>
+            <div class="mt-3">
+                <img src="https://web.archive.org/web/20000829041350im_/http://www.anybrowser.org/campaign/ab.gif"
+                    alt="Any Browser Campaign" class="inline-block mx-2">
+                <img src="https://web.archive.org/web/20091027064513/http://geocities.com/hotsprings/2082/ie.gif"
+                    alt="Best viewed with Internet Explorer" class="inline-block mx-2">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.querySelector("form");
+
+        // Créer ou récupérer la div de réponse
+        let respuestaDiv = document.getElementById("respuestaGPT");
+        if (!respuestaDiv) {
+            respuestaDiv = document.createElement("div");
+            respuestaDiv.id = "respuestaGPT";
+            respuestaDiv.style.whiteSpace = "pre-wrap";
+            respuestaDiv.style.background = "#f4f4f4";
+            respuestaDiv.style.padding = "1rem";
+            respuestaDiv.style.marginTop = "20px";
+            respuestaDiv.style.borderRadius = "8px";
+            respuestaDiv.style.border = "1px solid #ccc";
+            respuestaDiv.style.fontFamily = "monospace";
+            respuestaDiv.innerText = "";
+            form.after(respuestaDiv);
+        }
 
 
-
-
-
-
-    <!-- form y link ia(?) -->
-    <section class="form">
-        <h2>titulo</h2>
+        <!-- contacto -->
+        <section class="info">
+            <h2>titulo</h2>
             
-        <FIeldset>
-                <legend>Información Personal</legend>
-
-                <label for="name">Nombre Completo:</label>
-                <input type="text" id="name" required placeholder="Ingrese su nombre completo">
-
-                <label for="company">Entidad/Organización:</label>
-                <input type="text" id="company" required placeholder="Ingrese nombre de su Entidad/Organización">
-
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" required placeholder="Ingrese su Correo Electrónico">
-
-                <label for="location">Dirección</label>
-                <input type="text" id="location" required placeholder="Ingrese su Dirección">
-
-        </FIeldset>
-        
-        <fieldset>
-            <legend>Información del Proyecto</legend>
-            <label for="namep">Nombre del Proyecto:</label>
-            <input type="text" id="namep" required placeholder="Ingrese el nombre del Proyecto">
-
-            <label for="ubication">Ubicación del Proyecto:</label>
-            <input type="text" id="ubication" required placeholder="Ingrese la ubicación del Proyecto">
-
-           <label for="land">Tipo de suelo</label>
-            <select name="land" id="land" required>
-                        <option value="">Seleccione una opción</option>
-                        <option value="arenoso">Arenoso</option>
-                        <option value="arcilloso">Arcilloso</option>
-                        <option value="organico">Organico</option>
-                    </select>
-                        
-
-
-        </fieldset>
-    </section>
-
-
-    <!-- contacto -->
-    <section class="info">
-        <h2>titulo</h2>
-            <!-- TIRAR CSS Y HATML BIEN CUTIE!!! -->
-    </section>
-
-
-  </div>
-
-  <footer class="footer"> hecho por </footer>
-
+        </section>
+    <script src= 'js/'></script>
     
-    <script src="js/scripts.js"></script>
 </body>
+
 </html>
