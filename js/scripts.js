@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     console.log("✅ scripts.js cargado correctamente");
 
+    Chart.defaults.font.family = "'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif";
+    Chart.defaults.color = '#555'; // Un gris oscuro para mejor legibilidad.
+
     // === CALCULADORA DE PANELES SOLARES ===
     const megawattsInput = document.getElementById('megawatts');
     const panelWattageInput = document.getElementById('panel-wattage');

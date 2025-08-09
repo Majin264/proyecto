@@ -1,158 +1,135 @@
-body {
-    font-family: 'Times New Roman', Times, serif;
-    background-color:rgba(233, 234, 236, 0.781);
-    background-image: radial-gradient(93% 87% at 87% 89%, rgba(75, 107, 212, 0.425) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(70, 110, 148, 0.55) 0%, rgba(51, 177, 160, 0.336) 69.79%, rgba(255, 255, 255, 0) 100%);
-    color: rgb(3, 3, 3);
+/* ==========================================================================
+   1. Variables Globales y Estilos Base
+   ========================================================================== */
+:root {
+    --color-bg: rgba(233, 234, 236, 0.781);
+    --color-text-main: rgb(3, 3, 3);
+    --color-header-bg: rgba(235, 231, 203, 0.671);
+    --color-header-text: rgb(48, 32, 12);
+    --color-navbar-bg: rgba(92, 118, 175, 0.801);
+    --color-navbar-link: rgba(245, 245, 220, 0.841);
+    --color-navbar-link-hover: rgb(238, 238, 197);
+    --color-card-surface: #ffffff;
+    --font-primary: 'Times New Roman', Times, serif;
+    --border-radius: 8px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Reseteo básico y estilos globales */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(75, 107, 212, 0.225) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(70, 110, 148, 0.35) 0%, rgba(51, 177, 160, 0.136) 69.79%, rgba(255, 255, 255, 0) 100%);
+    color: var(--color-text-main);
     line-height: 1.6;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     min-height: 100vh;
-
 }
 
-header {
-    background-color: rgba(235, 231, 203, 0.671);
-    color: rgb(48, 32, 12);
+h1, h2, h3 { margin-bottom: 1rem; }
+
+.main-content {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+/* ==========================================================================
+   2. Header y Navegación
+   ========================================================================== */
+.header {
+    background-color: var(--color-header-bg);
+    color: var(--color-header-text);
     background-image: radial-gradient(100% 100% at 100% 100%, rgba(236, 236, 228, 0.425) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(228, 227, 217, 0.55) 0%, rgba(240, 214, 144, 0.336) 69.79%, rgba(210, 211, 161, 0) 100%);
-    top: 0;
-    height: 120px;
-    
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    position: relative;
+    flex-wrap: wrap;
 }
-.ttl {grid-area: ttl;}
-.img {grid-area: img;}
-.contact {grid-area: contact;}
-
-.header-overlay {
-    position: absolute;
-    top: 5px;
-    left: 2%;
-    z-index: 1;
-    width: 100px;
-    height: 100px;
-    margin-top: 7px;
-
-}
-
-.header .ttl {
-    font-size: 2.5em;
-    display: inline-flex;
-    margin-top: 17px;
-    padding-left: 42%;
-}
-
-.contact {
-    position: absolute;
-    background-color: rgb(221, 219, 196);
-    background-image: radial-gradient(100% 100% at 100% 100%, rgba(192, 192, 107, 0.425) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(248, 237, 111, 0.55) 0%, rgba(224, 172, 26, 0.336) 69.79%, rgba(210, 211, 161, 0) 100%);
-    border-color: rgba(90, 67, 23, 0.5);
-    top: 0;
-    padding: 15px 25px;
-    border-radius: 8px;
-    left: 85%;
-    top: 5%;
-    box-shadow: 0px 2px 4px rgba(87, 69, 44, 0.562);
-
-}
-
-.contact:hover {
-    transition: 0.3s;
-    background-color: rgba(219, 139, 73, 0.616);
-    background-image: radial-gradient(100% 100% at 100% 100%, rgba(233, 195, 72, 0.795) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(229, 228, 207, 0.733) 0%, rgba(224, 199, 173, 0.459) 69.79%, rgba(210, 211, 161, 0) 100%);
-    
-}
-
-header a {
-    color: rgb(92, 59, 18);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bolder;
-    text-decoration: none;
-    
-}
-
-header a:hover {
-    transition: 0.3s;
-    color: rgb(59, 26, 4);
-}
-
+.header-overlay { width: 80px; height: 80px; }
+.header .ttl { font-size: 2.2em; padding: 0; margin: 0; }
 .navbar {
-    background-color: rgba(92, 118, 175, 0.801);
+    background-color: var(--color-navbar-bg);
     background-image: radial-gradient(100% 100% at 100% 100%, rgba(228, 219, 189, 0.555) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(214, 212, 168, 0.459) 0%, rgba(224, 199, 173, 0.281) 69.79%, rgba(210, 211, 161, 0) 100%);
     padding: 10px;
     position: sticky;
     top: 0;
-    z-index: 10;
-    margin: 0;
+    z-index: 1000;
 }
-
 .navbar ul {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style-type: none;
-    padding: 0px;
-    gap: 20px;
-    justify-content: right;
-    padding-right: 2%;
-    margin: 0;
-    
+    gap: 1.5rem;
 }
-.navbar ul a{
-    color: rgba(245, 245, 220, 0.541);
-    text-decoration: none;
-    font-size: 1.5em;
-    
-}
+.navbar a { color: var(--color-navbar-link); text-decoration: none; font-size: 1.2em; transition: color 0.3s ease; }
+.navbar a:hover { color: var(--color-navbar-link-hover); }
 
-.navbar ul a:hover{
-    color: rgb(238, 238, 197);
-    text-decoration: none;
-    transition: 0.3s;
-}
+/* ==========================================================================
+   4. Secciones de Contenido
+   ========================================================================== */
+.inicio video { width: 100%; height: auto; border-radius: var(--border-radius); margin-bottom: 2rem; }
 
-video {
-    margin-top: 20px;
-    margin-left: 35px;
+.staticsmain { margin-bottom: 2rem; }
+
+/* CAMBIO DE TAMAÑO: Aumentado de 400px a 480px para dar más ancho */
+.statics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 2rem;
 }
 
-/* Calculadora */
+/* CAMBIO DE TAMAÑO: Aumentado de 450px a 520px para dar más altura */
+.statics section {
+    background-color: var(--color-card-surface);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    min-height: 520px;
+}
 
-.calculator-container {
-    background-color: #ffffff;
+.statics section canvas {
+    flex-grow: 1;
+}
+
+/* --- Calculadora y Formulario --- */
+.calculator-container,
+section#form {
+    background-color: var(--color-card-surface);
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin: 0 auto 2rem auto;
     width: 100%;
-    max-width: 500px;
-    text-align: center;
 }
-
-h1 {
-    color: #1a73e8;
-    margin-bottom: 1.5rem;
-}
-
-.input-group {
-    margin-bottom: 1rem;
-    text-align: left;
-}
-
-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-input[type="number"] {
+.input-group, form#form div { margin-bottom: 1.25rem; text-align: left; }
+label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+input[type="number"], input[type="text"], input[type="email"] {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
     font-size: 1rem;
+    box-sizing: border-box;
 }
-
 button {
-    background-color: #1a73e8;
+    background-color: var(--color-navbar-bg);
     color: white;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -164,28 +141,23 @@ button {
     width: 100%;
     margin-top: 1rem;
 }
+button:hover { background-color: #4a5e8c; }
+form#form fieldset { border: 1px solid #ccc; padding: 1.5rem; border-radius: var(--border-radius); margin-bottom: 2rem; }
+form#form legend { padding: 0 0.5rem; font-weight: bold; font-size: 1.2rem; color: var(--color-header-text); }
+#map { height: 300px; width: 100%; border-radius: 4px; }
 
-button:hover {
-    background-color: #1558b3;
-}
+/* ==========================================================================
+   5. Footer
+   ========================================================================== */
+footer { text-align: center; padding: 1.5rem; margin-top: 2rem; background-color: #3f3f3f; color: #f8f9fa; font-size: 0.9rem; }
 
-.results-container {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #e0e0e0;
-}
-
-.results-container h2 {
-    color: #333;
-    margin-bottom: 1rem;
-}
-
-.results-container p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.results-container span {
-    font-weight: bold;
-    color: #1a73e8;
+/* ==========================================================================
+   6. Media Queries (Tabletas y Escritorio)
+   ========================================================================== */
+@media (min-width: 768px) {
+    .header { justify-content: space-between; text-align: left; }
+    .header-overlay { position: static; width: 100px; height: 100px; }
+    .header .ttl { flex-grow: 1; text-align: center; }
+    .navbar ul { justify-content: flex-end; }
+    .navbar a { font-size: 1.5em; }
 }
