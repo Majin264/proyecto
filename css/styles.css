@@ -11,6 +11,9 @@
     --font-primary: 'Times New Roman', Times, serif;
     --border-radius: 8px;
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		--cursor-size: 60px;          /* taille du rond */
+		--cursor-color: 255,255,255;   /* blanc (R,G,B) */
+		--cursor-scale: 1;
 }
 
 /* Reseteo básico y estilos globales */
@@ -55,6 +58,27 @@ h1, h2, h3 { margin-bottom: 1rem; }
     position: relative;
     flex-wrap: wrap;
 }
+
+.btn {
+    background-color: rgb(230, 177, 116);
+    width: 60px;
+    height: 70px;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(71, 64, 64, 0.582);
+    transition: background-color 0.3s ease;
+    
+}
+
+.btn a {
+    color: var(--color-navbar-link);
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 0px;
+}
+
 .header-overlay { width: 80px; height: 80px; }
 .header .ttl { font-size: 2.2em; padding: 0; margin: 0; }
 .navbar {
@@ -84,17 +108,46 @@ h1, h2, h3 { margin-bottom: 1rem; }
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
     gap: 2rem;
+    width: 100%;
 }
 
 .statics section {
-    background-color: var(--color-card-surface);
+    background-color:rgba(234, 242, 243, 0.726);
     padding: 1.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
-    min-height: 520px;
+    min-height: 520px;   
 }
+.statics section h2 {text-align: center;} 
+
+.map-wrap {
+  position: relative;
+  height: 560px;
+  background-color:rgba(218, 234, 236, 0.726);
+  width: 1150px;
+  border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    padding: 1.5rem;
+}
+
+
+
+.legend {
+  padding: 6px 14px 14px;
+  font-size: 13px;
+  opacity: .8;
+}
+
+.pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #eef2f8;
+}
+
 
 .statics section canvas {
     flex-grow: 1;
@@ -102,7 +155,7 @@ h1, h2, h3 { margin-bottom: 1rem; }
 
 .calculator-container,
 section#form {
-    background-color: var(--color-card-surface);
+    background-color: rgba(204, 220, 238, 0.801);
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
@@ -119,6 +172,36 @@ input[type="number"], input[type="text"], input[type="email"] {
     font-size: 1rem;
     box-sizing: border-box;
 }
+
+
+.form-container {
+    background-color: rgba(194, 205, 221, 0.945);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin: 0 auto 2rem auto;
+    width: 100%;
+}
+
+input[type="text"] {
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(71, 64, 64, 0.582);
+    
+}
+
+input[type="number"], input[type="email"] {
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(71, 64, 64, 0.582);
+}
+
+#form {
+    background-color: rgba(81, 92, 139, 0.438);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
 button {
     background-color: var(--color-navbar-bg);
     color: white;
@@ -148,3 +231,38 @@ footer { text-align: center; padding: 1.5rem; margin-top: 2rem; background-color
     .navbar ul { justify-content: flex-end; }
     .navbar a { font-size: 1.5em; }
 }
+
+.cursor{
+  position: fixed;
+  top: 0; left: 0;
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  pointer-events: none;
+  z-index: 2147483647;                 /* tout en haut */
+  transform: translate(-50%,-50%) scale(var(--cursor-scale));
+  opacity: 0;
+  transition: transform 0.15s ease-out;
+}
+
+.cursor__core{
+  width: 100%;
+  height: 100%;
+  background: rgba(var(--cursor-color), 1); /* blanc plein */
+  border-radius: 50%;
+  box-shadow: 0 0 24px rgba(255,255,255,0.55);
+}
+
+/* Effet au clic */
+.cursor--click{
+      animation: pulse 0.3s ease-out;
+    }
+
+    @keyframes pulse{
+      0%   { transform: scale(1); opacity: 1; }
+      50%  { transform: scale(1.4); opacity: 0.8; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @media (hover: none){
+      .cursor{ display: none; }
+    }
